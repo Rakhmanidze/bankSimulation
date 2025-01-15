@@ -1,0 +1,30 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+    <persistence-unit name="bank_system">
+        <class>cz.cvut.fel.omo.bank.model.Bank</class>
+        <class>cz.cvut.fel.omo.bank.model.Employee</class>
+        <class>cz.cvut.fel.omo.bank.model.Customer</class>
+        <class>cz.cvut.fel.omo.bank.model.Person</class>
+        <class>cz.cvut.fel.omo.bank.model.Transaction</class>
+        <class>cz.cvut.fel.omo.bank.model.Account</class>
+        <class>cz.cvut.fel.omo.bank.model.Address</class>
+        <class>cz.cvut.fel.omo.bank.model.PaymentCard</class>
+        <properties>
+            <!-- Database Connection Properties -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/bank_system" />
+            <property name="javax.persistence.jdbc.user" value="postgres" />
+            <property name="javax.persistence.jdbc.password" value="postgres" />
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+
+            <!-- Hibernate Configuration -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="hibernate.show_sql" value="false" />
+            <property name="hibernate.format_sql" value="false" />
+            <property name="hibernate.use_sql_comments" value="false" />
+
+            <!-- Additional Settings -->
+            <property name="javax.persistence.transactionType" value="RESOURCE_LOCAL" />
+            <property name="hibernate.connection.pool_size" value="10" />
+        </properties>
+    </persistence-unit>
+</persistence>

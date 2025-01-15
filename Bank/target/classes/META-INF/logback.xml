@@ -1,0 +1,15 @@
+<configuration>
+    <logger name="org.hibernate" level="ERROR" />
+    <logger name="org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl" level="ERROR" />
+    <logger name="cz.cvut.fel.omo.bank" level="ERROR" />
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+</configuration>
